@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Comment from '../Comment/Comment';
-
+import { withRouter } from 'react-router-dom';
 
 
 class CommentsWrapper extends Component {
