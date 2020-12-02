@@ -7,7 +7,7 @@ class CommentsWrapper extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			comments : null
+			comments : []
 		}
 	}
 	

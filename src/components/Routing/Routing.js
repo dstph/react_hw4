@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 
-export class Navigation extends Component{
+class Routing extends Component{
 	render(){
 		const { location } = this.props;
 		return(
@@ -22,4 +22,4 @@ export class Navigation extends Component{
 	}
 }
 
-export default Navigation;
+export default Routing;

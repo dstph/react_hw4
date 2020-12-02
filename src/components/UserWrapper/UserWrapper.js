@@ -5,7 +5,7 @@ class UserWrapper extends Component{
 	constructor(props) {
 		super(props);
 		this.state = {
-			userItems : null,
+			userItems : []
 		}
 	}
 	componentDidMount(){
