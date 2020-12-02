@@ -1,30 +1,22 @@
 
 import './App.css';
-import UserWrapper from './components/UserWrapper/UserWrapper';
+import Routing from'./components/Routing/Routing';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-  
+	BrowserRouter as Router,
+	Route
 } from "react-router-dom";
-import CommentsWrapper from './components/CommentsWrapper/CommentsWrapper';
-
-
 
 function App() {
   return (
-    <Router>
-	    <div className="App">
-	       	<UserWrapper />
-	      	
-	       	<Switch>
-	       		
-
-				<Route to='/user/:id' component={CommentsWrapper} />
-	       	</Switch> 
-	    </div>
-    </Router>
+    <div className="App">
+    	<Router>
+    		<Route component={Routing} />
+    	</Router>
+    </div>
   );
 }
 
 export default App;
+
+
+

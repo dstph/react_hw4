@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 import User from '../User/User';
-import CommentsWrapper from '../CommentsWrapper/CommentsWrapper';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
-
 
 class UserWrapper extends Component{
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			userItems : null,
 		}
@@ -28,18 +17,17 @@ class UserWrapper extends Component{
 	render(){
 		const { userItems } = this.state;
 		return(
-			<React.Fragment>
-	
-				{userItems !==null &&
+				
+				<>
+				{userItems  &&
 				userItems.map((props, index) => (
 				 	<div>
-						<User {...props} key={props.email? props.email : index}  />
+						<User {...props} key={props.email}  />
 						
 					</div>
 				))}
-
-
-			</React.Fragment>
+				</>
+			
 		)
 	}
 }

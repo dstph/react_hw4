@@ -7,8 +7,7 @@ class CommentsWrapper extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			comments : null,
-			userId : props.match.params.id
+			comments : null
 		}
 	}
 	
@@ -20,14 +19,16 @@ class CommentsWrapper extends Component {
 	render(){
 		
 		const { comments } = this.state;
-		
+		const { username } = this.props.location.name;
+		const { id } = this.props.location.nameid;
+
 		return(
 			<div>
 			
-				<h1>Comments by : </h1>
-				{comments !== null &&
+				<h1>Comments by {username} :  </h1>
+				{comments &&
 				comments.map((prop, index) => (
-					<Comment {...prop} key={prop.id} />
+					<Comment {...prop} key={prop.id} idUser={id} />
 				))
 
 

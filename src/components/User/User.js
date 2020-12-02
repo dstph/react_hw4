@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class User extends Component{
@@ -32,9 +32,9 @@ class User extends Component{
 				<span>catch phtase : { catchPhrase }</span>
 				<span>bs : { bs }</span>
 				
-			<BrowserRouter>
-				<Link to={`/user/${id}`}> see me </Link>
-			</BrowserRouter>
+			
+				<Link to={{pathname: `/user/${id}`, name: {username}, nameid: {id} }} > see me </Link>
+
 			</div>
 		)
 	}
